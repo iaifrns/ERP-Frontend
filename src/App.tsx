@@ -1,11 +1,11 @@
-import { Button } from "./components/ui/button";
+import { BrowserRouter } from "react-router-dom";
+import Routers from "./routes/Routers";
 
 function App() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold">Hello world</h1>
-      <Button>Click me</Button>
-    </div>
+    <BrowserRouter>
+      <Routers/>
+    </BrowserRouter>
   );
 }
 
