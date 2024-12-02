@@ -81,7 +81,7 @@
 }
 
 .login-container {
-  @apply w-full max-w-[1100px] flex bg-white h-full max-h-[600px] max-md:flex-col
+  @apply w-full max-w-[1100px] flex bg-white h-full max-h-[630px] max-md:flex-col
 }
 
 .register-container {

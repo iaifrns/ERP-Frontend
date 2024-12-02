@@ -21,7 +21,7 @@ const Login = () => {
           <img
             src={images.LOGINIMG}
             alt={images.LOGINIMG}
-            className="md:w-[320px] max-md:w-[200px]"
+            className="md:w-[350px] max-md:w-[200px]"
           />
         </div>
         <div className="w-full p-8 flex justify-center items-center">
