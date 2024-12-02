@@ -59,7 +59,6 @@
   }
 }
 
-
 @layer base {
   * {
     @apply border-border;
@@ -67,4 +66,24 @@
   body {
     @apply bg-background text-foreground font-poppin;
   }
+}
+
+.logo-css {
+  @apply md:w-[150px] max-md:w-[100px]
+}
+
+.small-title {
+  @apply font-semibold text-xl
+}
+
+.desc-text {
+  @apply text-sm text-gray-400
+}
+
+.login-container {
+  @apply w-full max-w-[1100px] flex bg-white h-full max-h-[600px] max-md:flex-col
+}
+
+.register-container {
+  @apply w-full max-w-[600px] p-8 flex gap-4 bg-white items-center flex-col
 }
