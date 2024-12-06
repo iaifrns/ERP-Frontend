@@ -4,11 +4,12 @@ import Register from "@/features/authentication/Register";
 import PageNotFound from "@/features/error/404";
 import { Route, Routes } from "react-router-dom";
 import { routerPath } from "./paths";
+import AuthTranslationRapper from "@/layout/AuthTranslationRapper";
 
 const Routers = () => {
   return (
     <Routes>
-      <Route path={routerPath.AUTH}>
+      <Route path={routerPath.AUTH} element={<AuthTranslationRapper/>}>
         <Route path={routerPath.LOGIN} element={<Login />}></Route>
         <Route path={routerPath.REGISTER} element={<Register />}></Route>
         <Route

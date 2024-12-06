@@ -1,17 +1,20 @@
 import { bgImages, images } from "@/constants/images";
-import { englishText } from "@/constants/websiteText";
 import InputBox from "./components/InputBox";
 import CheckBoxSection from "./components/CheckBoxSection";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { paths } from "@/routes/paths";
+import { useSelector } from "react-redux";
+import { RootState } from "@/state/store";
 
 const Login = () => {
   const navigate = useNavigate();
 
+  const language = useSelector((state:RootState) => state.Language)
+
   const handleNavigateToRegister = () => navigate(paths.REGISTER);
   return (
-    <div className="flex justify-center items-center w-full h-screen">
+    <div className="flex justify-center items-center w-full h-full">
       <div className="login-container">
         <div
           className="flex w-full h-full p-8 bg-cover flex-col items-center md:gap-16 max-md:gap-4"
@@ -26,18 +29,18 @@ const Login = () => {
         </div>
         <div className="w-full p-8 flex justify-center items-center">
           <div className="md:w-[80%] max-md:w-full flex flex-col gap-4 h-fit">
-            <p className="small-title">{englishText.LOGIN.TITLE}</p>
-            <p className="desc-text">{englishText.LOGIN.DESC}</p>
+            <p className="small-title">{language.LOGIN.TITLE}</p>
+            <p className="desc-text">{language.LOGIN.DESC}</p>
             <InputBox
-              label={englishText.LOGIN.LABEL1}
+              label={language.LOGIN.LABEL1}
               placeholder="demo@gmail.com"
-              type={englishText.LOGIN.LABEL1}
+              type={language.LOGIN.LABEL1}
             />
-            <InputBox label={englishText.LOGIN.LABEL2} placeholder="****" />
-            <CheckBoxSection label={englishText.LOGIN.CHECKBOXTEXT} />
-            <Button>{englishText.LOGIN.SIGNIN}</Button>
+            <InputBox label={language.LOGIN.LABEL2} placeholder="****" />
+            <CheckBoxSection label={language.LOGIN.CHECKBOXTEXT} />
+            <Button>{language.LOGIN.SIGNIN}</Button>
             <Button variant={"outline"} onClick={handleNavigateToRegister}>
-              {englishText.LOGIN.SIGNUP}
+              {language.LOGIN.SIGNUP}
             </Button>
           </div>
         </div>
